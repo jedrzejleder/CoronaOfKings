@@ -29,11 +29,9 @@ public class Move : MonoBehaviour
             lb.velocity = new Vector2(-2, 0);
             transform.localScale = new Vector2(-1, 1);
             anim.SetBool("tuptani", true);
-
         }
         else
         {
-
             anim.SetBool("tuptani", false);
         }
     }
