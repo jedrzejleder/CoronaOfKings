@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1107 &-8874977379538726157
+--- !u!1107 &-7329260953138339995
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -10,8 +10,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: -8582371542161116548}
-    m_Position: {x: 320, y: -20, z: 0}
+    m_State: {fileID: -4794304273673175443}
+    m_Position: {x: 360, y: 0, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -21,8 +21,8 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -8582371542161116548}
---- !u!1102 &-8582371542161116548
+  m_DefaultState: {fileID: -4794304273673175443}
+--- !u!1102 &-4794304273673175443
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -54,19 +54,13 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 1
+  m_Name: 1 (1)
   serializedVersion: 5
-  m_AnimatorParameters:
-  - m_Name: tuptani13
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+  m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: -8874977379538726157}
+    m_StateMachine: {fileID: -7329260953138339995}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
