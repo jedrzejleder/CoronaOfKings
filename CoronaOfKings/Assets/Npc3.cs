@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Npc3 : MonoBehaviour
 {
-    public float npc3X;
-
-    private void Awake()
+    public static int nr;
+    public Rigidbody2D lb;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        npc3X = transform.position.x;
+        nr = 3;
     }
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        npc3X = transform.position.x;
+        nr = 0;
+    }
+    public void ExitRightAnswer()
+    {
+        transform.localScale = new Vector2(-1, 1);
+        lb.velocity = new Vector2(2, 0);
     }
 }
