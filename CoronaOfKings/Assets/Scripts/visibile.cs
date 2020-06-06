@@ -27,8 +27,11 @@ public class visibile : MonoBehaviour
         if (position.x > 0.5)
         {
             doit.transform.localScale = new Vector3(1, 1, 1);
+        }
 
-
+        if (position.x > 11)
+        {
+            SceneManager.LoadScene(0);
         }
     }
 
