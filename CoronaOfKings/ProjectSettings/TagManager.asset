@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Hero
+  - TP
   layers:
   - Default
   - TransparentFX
@@ -49,4 +52,16 @@ TagManager:
     locked: 0
   - name: toplevel
     uniqueID: 4037472799
+    locked: 0
+  - name: Background
+    uniqueID: 417904915
+    locked: 0
+  - name: Enemies
+    uniqueID: 2362430935
+    locked: 0
+  - name: Entity
+    uniqueID: 3127255213
+    locked: 0
+  - name: Platform
+    uniqueID: 471690939
     locked: 0
