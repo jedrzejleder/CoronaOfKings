@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class Npc2 : MonoBehaviour
 {
-    public static Vector3 npc2Pos;
+    public float npc2X;
 
+    private void Awake()
+    {
+        npc2X = transform.position.x;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        npc2Pos = transform.position;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        npc2X = transform.position.x;
     }
 }

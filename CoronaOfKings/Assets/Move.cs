@@ -1,74 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.Build.Reporting;
 using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    Vector3 pos;
-    Vector3 npc1Pos;
-    Vector3 npc2Pos;
-    Vector3 npc3Pos;
-    Vector3 startPos;
+    public float speed = 1.5f;
+    public Animator anim = new Animator();
+    public Rigidbody2D lb;
     // Start is called before the first frame update
     void Start()
     {
-        pos = transform.position;
-        npc1Pos = Npc1.npc1Pos;
-        npc2Pos = Npc2.npc2Pos;
-        npc3Pos = Npc3.npc3Pos;
-        startPos = transform.position;
+        anim.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && pos.x != startPos.x)
+        if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            pos = transform.position;
-            pos.x = startPos.x;
-            transform.position = pos;
-        }*/
-        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && pos.x == npc1Pos.x - 2)
-        {
-            pos = transform.position;
-            pos.x = startPos.x;
-            transform.position = pos;
+            lb.velocity = new Vector2(2, 0);
+            transform.localScale = new Vector2(1, 1);
+            anim.SetBool("tuptani", true);
         }
-        else if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && pos.x == npc2Pos.x - 2)
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            pos = transform.position;
-            pos.x = npc1Pos.x - 2;
-            transform.position = pos;
+            lb.velocity = new Vector2(-2, 0);
+            transform.localScale = new Vector2(-1, 1);
+            anim.SetBool("tuptani", true);
+
         }
-        else if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && pos.x == npc3Pos.x - 2)
+        else
         {
-            pos = transform.position;
-            pos.x = npc2Pos.x - 2;
-            transform.position = pos;
-        }
-        if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && pos.x == startPos.x)
-        {
-            pos = transform.position;
-            //pos.x += 2;
-            //transform.position = pos;
-            pos.x = (npc1Pos.x) - 2;
-            transform.position = pos;
-        }
-        else if((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && pos.x == npc1Pos.x - 2)
-        {
-            pos = transform.position;
-            //pos.x += 2;
-            //transform.position = pos;
-            pos.x = (npc2Pos.x) - 2;
-            transform.position = pos;
-        }
-        else if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && pos.x == npc2Pos.x - 2)
-        {
-            pos = transform.position;
-            //pos.x += 2;
-            //transform.position = pos;
-            pos.x = (npc3Pos.x) - 2;
-            transform.position = pos;
+
+            anim.SetBool("tuptani", false);
         }
     }
 }
