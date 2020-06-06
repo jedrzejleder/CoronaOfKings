@@ -7,9 +7,10 @@ public class enemy : MonoBehaviour
 {
     public Animator anim2;
     public Rigidbody2D lb;
+    public int health;
     void Start()
     {
-        
+        health = 3;
     }
 
     public void Killed()
