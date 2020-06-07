@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - Hero
   - TP
+  - NPC1
+  - NPC2
+  - NPC3
   layers:
   - Default
   - TransparentFX
@@ -43,25 +46,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: New Sprite
-    uniqueID: 2868418311
-    locked: 0
-  - name: New Sprite (1)
-    uniqueID: 2987320615
-    locked: 0
-  - name: toplevel
-    uniqueID: 4037472799
-    locked: 0
-  - name: Background
-    uniqueID: 417904915
-    locked: 0
-  - name: Enemies
-    uniqueID: 2362430935
-    locked: 0
-  - name: Entity
-    uniqueID: 3127255213
-    locked: 0
-  - name: Platform
-    uniqueID: 471690939
     locked: 0
