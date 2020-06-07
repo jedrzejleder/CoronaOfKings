@@ -31,7 +31,7 @@ public class visibile : MonoBehaviour
 
         if (position.x > 11)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
