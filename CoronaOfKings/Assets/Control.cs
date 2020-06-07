@@ -27,7 +27,7 @@ public class Control : MonoBehaviour
         }
         if(collision.gameObject.tag == "TP")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
     private void Update()
